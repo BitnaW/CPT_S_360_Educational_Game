@@ -2,13 +2,13 @@
 CPT_S 360 Course Project
 
 ## Contributors:
-Sydnee Boothby
+Sydnee Boothby -
 sydnee.boothby@wsu.edu
 
-Ingrid Llorente
+Ingrid Llorente -
 ingrid.llorente@wsu.edu
 
-Bitna White
+Bitna White -
 bitna.white@wsu.edu
 
 ## Project Description:
