@@ -12,4 +12,4 @@ Bitna White -
 bitna.white@wsu.edu
 
 ## Project Description:
-This project is an educational game designend using (insert programming language/game engine info here) to teach Systems Programming concepts in an entertaining way.
+This project is an educational game designed using Unity with C# intended to teach Systems Programming concepts in an entertaining way.
