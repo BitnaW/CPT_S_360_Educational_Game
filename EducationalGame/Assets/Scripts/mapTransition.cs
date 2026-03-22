@@ -2,15 +2,14 @@ using System;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class mapTransition : MonoBehaviour
+public class MapTransition : MonoBehaviour
 {
     
     [SerializeField] Animator animator;
-
-    // this is the boundary you're transitioning to
-    [SerializeField] PolygonCollider2D mapBoundary;
-    [SerializeField] Transform spawnPoint;
-    CinemachineConfiner2D confiner;
+    
+    [SerializeField] PolygonCollider2D mapBoundary;  // this is the boundary you're transitioning to
+    [SerializeField] Transform spawnPoint; // represents the space you have to land on to teleport
+    private CinemachineConfiner2D confiner;
     
     private void Awake()
     {
@@ -22,8 +21,6 @@ public class mapTransition : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             FadeTransition(collision.gameObject);
-            //collision.transform.position = spawnPoint.position;
-            //confiner.BoundingShape2D = mapBoundary; 
         }
     }
     
@@ -32,9 +29,15 @@ public class mapTransition : MonoBehaviour
         await screenFader.instance.FadeOut();
        
         confiner.BoundingShape2D = mapBoundary; 
-        player.transform.position = spawnPoint.position;
+        MovePlayer(player);
         
         await screenFader.instance.FadeIn();
+    }
+
+    // method to be able to move player to a spawn point 
+    private void MovePlayer(GameObject player)
+    {
+        player.transform.position = spawnPoint.position;
     }
 
    
