@@ -24,11 +24,13 @@ public class pinkMCPlayerMovement : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = moveInput * moveSpeed;
-        
+        Debug.Log("moveInput: " + moveInput); //debugging rq
+        Debug.Log("velocity: " + rb.linearVelocity);
     }
 
     public void Move(InputAction.CallbackContext context)
     {
+        Debug.Log("Move called! Phase: " + context.phase); //debugging  
         animator.SetBool("isWalking", true);
 
         if (context.canceled)

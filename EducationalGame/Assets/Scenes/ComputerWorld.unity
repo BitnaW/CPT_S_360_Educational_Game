@@ -345,8 +345,8 @@ Transform:
   m_GameObject: {fileID: 1713848413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.977, y: 6.582, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.977, y: 6.5694, z: 0}
+  m_LocalScale: {x: 1, y: 1.0287, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -430,55 +430,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: c5bbe042-e71e-4c0f-ba7f-8d7a4327a6ce
+    m_ActionId: 63372e21-2995-4c9e-94c2-cb40b6962be5
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 4ec8170a-cd9f-49f4-9108-4e01f925b159
+    m_ActionId: df33a90f-70db-4d5f-98e1-db5397584022
     m_ActionName: 'Player/Look[/Mouse/delta,/Pen/delta]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: cd06bf35-277f-40e9-9ce7-6f0e1acd778e
+    m_ActionId: 9541adc7-0b38-4c0e-9d20-b0784c5775d5
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: f63e7869-e522-49d7-b3aa-4cfeebe2972f
+    m_ActionId: 3be42de1-3614-4936-90a6-6015f70f126e
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: df4e9d67-ef23-4b73-afe5-7ccc3bad410f
+    m_ActionId: fd45721f-b357-4416-8c1d-a987dc6d55a5
     m_ActionName: 'UI/Submit[/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1677fb95-633d-43ba-814f-01ec2593cba1
+    m_ActionId: e2cad22d-4820-4bd8-b8a6-6fec415bcbb5
     m_ActionName: 'UI/Cancel[/Keyboard/escape]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: e19cae4f-913c-4b18-8d10-c43086420f88
+    m_ActionId: ab7a898c-022a-4e24-8061-04995a64273c
     m_ActionName: 'UI/Point[/Mouse/position,/Pen/position]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5237c624-2a18-4f2c-9740-39c8b619f66a
+    m_ActionId: 1590eab6-a51c-4d7b-8b4a-324485bd5f54
     m_ActionName: 'UI/Click[/Mouse/leftButton,/Pen/tip]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9e97d0ed-80e8-478b-83c1-309cd9a0517c
+    m_ActionId: 5636f091-691c-4b0e-9012-afaabf786bbd
     m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 4178f8bc-267e-4451-8959-672d343e32eb
+    m_ActionId: 9765a283-3968-44c1-b4ae-7b5fb18865ed
     m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 87d4fa38-6d43-4378-873b-45a4fcef702f
+    m_ActionId: d6b2de93-92c7-4cc0-b7a7-9a17fe6ad8e8
     m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 7db731f0-e5d9-4ccb-99ea-44dd1f6f1d72
+    m_ActionId: ad6af514-d5e8-4bff-8999-0846ac9906b2
     m_ActionName: UI/TrackedDevicePosition
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 5d81c40a-e59d-4803-97e5-49a8c8920932
+    m_ActionId: 7a2e2fe7-1706-4719-a761-51470046a6bd
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
