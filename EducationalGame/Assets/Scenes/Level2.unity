@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 1713848413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.977, y: 6.5694, z: 0}
+  m_LocalPosition: {x: -4.514, y: 7.105, z: 0}
   m_LocalScale: {x: 1, y: 1.0287, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -480,7 +480,7 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7a2e2fe7-1706-4719-a761-51470046a6bd
     m_ActionName: UI/TrackedDeviceOrientation
-  m_NeverAutoSwitchControlSchemes: 0
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
