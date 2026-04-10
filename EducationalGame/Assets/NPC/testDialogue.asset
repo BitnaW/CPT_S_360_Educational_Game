@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b2f30e71d9446fe9b45d90a93b5bc3, type: 3}
   m_Name: testDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NpcDialogue
-  npcName: Testing Block
+  npcName: Testing NPC
   dialogueLines:
-  - hey does this work?
-  - 'be pretty cool if it did '
-  autoProgressLines: 0100
+  - If you're seeing this you can talk to me.
+  - It would be pretty cool if you could go to the next line of dialogue.
+  - If I have a lot of things to say you can press the interact button again.
+  - Okay, bye.
+  autoProgressLines: 
   dialogueSpeed: 0.05
   autoProgressDelay: 1.5
