@@ -1,4 +1,5 @@
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class NPC : MonoBehaviour, IInteractable
     public GameObject dialoguePanel;
     public TMP_Text  nameText, dialogueText;
     
+    //opt. addition
+    public Image portraitImage;
+
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
     
