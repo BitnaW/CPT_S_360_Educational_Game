@@ -2,6 +2,7 @@ using System.Collections;
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class NPC : MonoBehaviour, IInteractable
@@ -11,13 +12,22 @@ public class NPC : MonoBehaviour, IInteractable
     // UI Elements 
     public GameObject dialoguePanel;
     public TMP_Text  nameText, dialogueText;
-    
+    public Button closeButton; 
     //opt. addition
-    public Image portraitImage;
+    //public Image portraitImage;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
     
+    //set dialogue panel to empty until interaction  
+    void Start()
+    {
+        dialoguePanel.SetActive(false); // dialogue panel is closed at the start
+        nameText.SetText(""); 
+        dialogueText.SetText("");
+    }
+
+
     public void Interact()
     {
         if (dialogueData == null)
@@ -46,6 +56,9 @@ public class NPC : MonoBehaviour, IInteractable
         nameText.SetText(dialogueData.npcName);
         dialoguePanel.SetActive(true); // opens the dialogue panel
         StartCoroutine(TypeLine()); // starts typing a line
+
+        closeButton.onClick.RemoveAllListeners();
+        closeButton.onClick.AddListener(EndDialogue);
     }
 
     void NextLine()
@@ -92,6 +105,7 @@ public class NPC : MonoBehaviour, IInteractable
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.SetText("");
+        
         dialoguePanel.SetActive(false);
     }
     
