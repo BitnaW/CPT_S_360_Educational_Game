@@ -11,8 +11,8 @@ public class NPC : MonoBehaviour, IInteractable
     public GameObject dialoguePanel;
     public TMP_Text  nameText, dialogueText;
     
-    private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    protected int dialogueIndex;
+    protected bool isTyping, isDialogueActive;
     
     public void Interact()
     {
@@ -35,7 +35,7 @@ public class NPC : MonoBehaviour, IInteractable
         return !isDialogueActive;
     }
 
-    void StartDialogue()
+    protected void StartDialogue()
     {
         isDialogueActive = true;
         dialogueIndex = 0; // starts the dialogue index all the way back to the beginning
@@ -44,7 +44,7 @@ public class NPC : MonoBehaviour, IInteractable
         StartCoroutine(TypeLine()); // starts typing a line
     }
 
-    void NextLine()
+    protected virtual void NextLine()
     {
         if (isTyping) // lets you skip ahead to the full line
         {
@@ -63,7 +63,7 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    IEnumerator TypeLine()
+    protected IEnumerator TypeLine()
     {
         isTyping = true;
         dialogueText.SetText("");
