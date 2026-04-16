@@ -8,16 +8,14 @@ using UnityEngine;
 public class ProcessTarget : MonoBehaviour
 {
     private Rigidbody rb;
-    // TODO: Ingrid - Use system serialize or serialize field, not both 
-    [SerializeField] public int remainingTime;
-    [SerializeField] public int burstTime;
-    [SerializeField] public int arrivalTime;
-    public TMP_Text  healthText;
+    public int remainingTime;
+    public int burstTime;
+    public int arrivalTime;
+    private HealthBar healthBar;
     
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        healthText.SetText(remainingTime.ToString());
+        rb = GetComponent<Rigidbody>(); // I know this seems useless, but we need it for collisions
     }
 
     // fixed this, it was deducting by 2
@@ -31,7 +29,7 @@ public class ProcessTarget : MonoBehaviour
         else if (remainingTime > 0)
         {
             remainingTime--;
-            healthText.SetText(remainingTime.ToString());
+            healthBar.UpdateHealthBar(remainingTime, burstTime);
         }
         
     }
