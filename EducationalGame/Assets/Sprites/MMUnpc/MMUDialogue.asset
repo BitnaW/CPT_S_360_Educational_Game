@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcDialogue
   npcName: Monsieur MMU
   dialogueLines:
-  - Blah Blah Blah
+  - So you think you can escape this computer? No process traverses without my saying
+    so!
+  - Choosing poorly cached path will cost you!!
   autoProgressLines: 
   dialogueSpeed: 0.05
   autoProgressDelay: 1.5
