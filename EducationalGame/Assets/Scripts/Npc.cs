@@ -49,7 +49,7 @@ public class NPC : MonoBehaviour, IInteractable
         return !isDialogueActive;
     }
 
-    void StartDialogue()
+    public void StartDialogue() //changed to public to allow interact to call it
     {
         isDialogueActive = true;
         dialogueIndex = 0; // starts the dialogue index all the way back to the beginning
