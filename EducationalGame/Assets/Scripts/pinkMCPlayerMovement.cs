@@ -1,46 +1,78 @@
-//Reference: Game Code Library: Idle and Walking Player Animations
-
 using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class pinkMCPlayerMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+    private bool isFrozen = false;
+
+    [Header("Freeze UI")]
+    public Image freezeImage;   
+    public Sprite[] freezeFrames; //hard coded animation  
+    public float frameRate = 0.15f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        if (freezeImage != null)
+            freezeImage.color = new Color(1, 1, 1, 0); // hidden at start
     }
 
-    // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
-        Debug.Log("moveInput: " + moveInput); //debugging rq
-        Debug.Log("velocity: " + rb.linearVelocity);
+        if (!isFrozen)
+            rb.linearVelocity = moveInput * moveSpeed;
+        else
+            rb.linearVelocity = Vector2.zero;
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        Debug.Log("Move called! Phase: " + context.phase); //debugging  
         animator.SetBool("isWalking", true);
-
         if (context.canceled)
-        {
             animator.SetBool("isWalking", false);
-            //can put last direction here  
-        }
-
         moveInput = context.ReadValue<Vector2>();
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
+    }
+
+    public void FreezeForSeconds(float duration)
+    {
+        StartCoroutine(FreezeCoroutine(duration));
+    }
+
+    private IEnumerator FreezeCoroutine(float duration)
+    {
+        isFrozen = true;
+        animator.SetBool("isWalking", false);
+        if (freezeImage != null)
+        {
+            freezeImage.color = new Color(1, 1, 1, 1); // show
+            StartCoroutine(PlayFreezeAnimation(duration));
+        }
+        yield return new WaitForSeconds(duration);
+        if (freezeImage != null)
+            freezeImage.color = new Color(1, 1, 1, 0); // hide
+        isFrozen = false;
+    }
+
+    private IEnumerator PlayFreezeAnimation(float duration)
+    {
+        float elapsed = 0f;
+        int frameIndex = 0;
+        while (elapsed < duration)
+        {
+            if (freezeFrames.Length > 0)
+                freezeImage.sprite = freezeFrames[frameIndex % freezeFrames.Length];
+            frameIndex++;
+            elapsed += frameRate;
+            yield return new WaitForSeconds(frameRate);
+        }
     }
 }

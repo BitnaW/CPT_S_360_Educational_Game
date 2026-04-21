@@ -24,9 +24,13 @@ public class TileChecker : MonoBehaviour
     private Vector3Int lastCheckedCell;
     private Coroutine popupCoroutine;
 
+    private pinkMCPlayerMovement playerMovement; 
+
     void Start()
     {
         levelTimer = FindObjectOfType<LevelTimer>();
+        playerMovement = FindObjectOfType<pinkMCPlayerMovement>();
+        Debug.Log("PlayerMovement found: " + playerMovement);
         penaltyPopup.SetActive(false);
     }
 
@@ -52,11 +56,13 @@ public class TileChecker : MonoBehaviour
         {
             levelTimer.DeductTime(highPenaltyTime);
             ShowPopup($"Page Fault! -{highPenaltyTime}s");
+            playerMovement.FreezeForSeconds(highPenaltyTime); //freeze player for high penalty
         }
         else if (midPenaltyTilemap.HasTile(gridPos))
         {
             levelTimer.DeductTime(midPenaltyTime);
             ShowPopup($"Page Fault! -{midPenaltyTime}s");
+            playerMovement.FreezeForSeconds(midPenaltyTime); //freeze player for mid penalty    
         }
     }
 
