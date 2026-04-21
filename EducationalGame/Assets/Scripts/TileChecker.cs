@@ -56,13 +56,13 @@ public class TileChecker : MonoBehaviour
         {
             levelTimer.DeductTime(highPenaltyTime);
             ShowPopup($"Page Fault! -{highPenaltyTime}s");
-            playerMovement.FreezeForSeconds(highPenaltyTime); //freeze player for high penalty
+            playerMovement.FreezeForSeconds(highPenaltyTime, playerMovement.highPenaltyFreezeFrames); //freeze player for high penalty
         }
         else if (midPenaltyTilemap.HasTile(gridPos))
         {
             levelTimer.DeductTime(midPenaltyTime);
             ShowPopup($"Page Fault! -{midPenaltyTime}s");
-            playerMovement.FreezeForSeconds(midPenaltyTime); //freeze player for mid penalty    
+            playerMovement.FreezeForSeconds(midPenaltyTime, playerMovement.midPenaltyFreezeFrames); //freeze player for mid penalty    
         }
     }
 
