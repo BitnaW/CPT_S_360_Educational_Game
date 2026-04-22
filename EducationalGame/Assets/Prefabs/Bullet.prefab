@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7780823346568923818}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1124824731
+  m_SortingLayerID: 830688739
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -180,3 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: 10
+  lifetime: 2

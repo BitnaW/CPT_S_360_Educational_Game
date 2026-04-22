@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcDialogue
   npcName: Testing NPC
   dialogueLines:
-  - If you're seeing this you can talk to me.
-  - It would be pretty cool if you could go to the next line of dialogue.
-  - If I have a lot of things to say you can press the interact button again.
-  - Okay, bye.
+  - hey
   autoProgressLines: 
   dialogueSpeed: 0.05
   autoProgressDelay: 1.5
