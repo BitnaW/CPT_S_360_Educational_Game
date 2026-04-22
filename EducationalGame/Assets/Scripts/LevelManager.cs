@@ -1,11 +1,20 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class LevelTimer : MonoBehaviour
 {
     public float timeRemaining = 60f;
     public TMP_Text timerText;
     private bool timerRunning = true;
+
+//script to handle death conditions
+    [Header("Death UI")]
+    public GameObject deathScreen;
+    public float deathScreenDuration = 2f;
+
+
 
     void Update()
     {
@@ -36,7 +45,22 @@ public class LevelTimer : MonoBehaviour
 
     void OnTimeUp()
     {
-        Debug.Log("Time's up! Trigger fail state here");
-        // load fail screen, reload scene, etc.
+        StartCoroutine(ShowDeathThenGameOver());
     }
+
+    private System.Collections.IEnumerator ShowDeathThenGameOver()
+    {
+        Time.timeScale = 0f;
+
+        if (deathScreen != null)
+        {
+            deathScreen.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(deathScreenDuration); //real time to show death screen
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("GameOverScene"); 
+    }
+
 }
