@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6836671148287191351}
   m_Layer: 0
   m_Name: SmallTarget
-  m_TagString: Untagged
+  m_TagString: Process
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,10 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f963c80a3b60473aa2256f357a83e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  remainingTime: 0
-  burstTime: 6
+  remainingTime: 6
+  burstTime: 2
   arrivalTime: 8
   healthBar: {fileID: 3304237789826956966}
+  targetManager: {fileID: 0}
 --- !u!1 &4507370733896624521
 GameObject:
   m_ObjectHideFlags: 0

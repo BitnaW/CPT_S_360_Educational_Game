@@ -108,10 +108,10 @@ GameObject:
   - component: {fileID: 14819136525149533}
   - component: {fileID: 6262436938473435575}
   - component: {fileID: 1508388927619972484}
-  - component: {fileID: -4933000145349911836}
+  - component: {fileID: -5952509638553233377}
   m_Layer: 0
   m_Name: MedTarget
-  m_TagString: Untagged
+  m_TagString: Process
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-4933000145349911836
+--- !u!114 &-5952509638553233377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,10 +276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f963c80a3b60473aa2256f357a83e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProcessTarget
-  remainingTime: 0
-  burstTime: 3
-  arrivalTime: 4
+  remainingTime: 4
+  burstTime: 4
+  arrivalTime: 2
   healthBar: {fileID: 1865122598201209563}
+  targetManager: {fileID: 0}
 --- !u!1 &5453677915164988751
 GameObject:
   m_ObjectHideFlags: 0

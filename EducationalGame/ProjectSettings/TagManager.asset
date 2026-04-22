@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - TransitionPoint
+  - Bullet
+  - Process
+  - Enemy
   layers:
   - Default
   - TransparentFX

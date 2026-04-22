@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: -4933000145349911836}
   m_Layer: 0
   m_Name: LargeTarget
-  m_TagString: Untagged
+  m_TagString: Process
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,10 +276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f963c80a3b60473aa2256f357a83e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProcessTarget
-  remainingTime: 0
-  burstTime: 6
+  remainingTime: 8
+  burstTime: 8
   arrivalTime: 1
   healthBar: {fileID: 1865122598201209563}
+  targetManager: {fileID: 0}
 --- !u!1 &5453677915164988751
 GameObject:
   m_ObjectHideFlags: 0
