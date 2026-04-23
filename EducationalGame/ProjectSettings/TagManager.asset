@@ -48,8 +48,8 @@ TagManager:
   - name: Ground
     uniqueID: 4258570267
     locked: 0
-  - name: Walk Behind
-    uniqueID: 2424637111
+  - name: Walk in Front
+    uniqueID: 2808761891
     locked: 0
   - name: Player
     uniqueID: 507042827
@@ -57,8 +57,8 @@ TagManager:
   - name: Collision
     uniqueID: 830688739
     locked: 0
-  - name: Walk in Front
-    uniqueID: 2808761891
+  - name: Walk Behind
+    uniqueID: 2424637111
     locked: 0
   - name: Decor
     uniqueID: 712928951
