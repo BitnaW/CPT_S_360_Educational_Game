@@ -101,3 +101,16 @@ InitTestScene*.unity*
 EducationalGame/Library/
 
 EducationalGame/UserSettings/
+
+# Unity project is in subfolder so I had to update thegitignore to ignore the correct folders
+/EducationalGame/[Ll]ibrary/
+/EducationalGame/[Tt]emp/
+/EducationalGame/[Oo]bj/
+/EducationalGame/[Ll]ogs/
+/EducationalGame/[Uu]ser[Ss]ettings/
+
+# try to ignore Temp anywhere
+**/[Tt]emp/**
+EducationalGame/Temp/__Backupscenes/0.backup
+
+EducationalGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
