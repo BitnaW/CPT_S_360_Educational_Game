@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,8 +9,9 @@ using UnityEngine.SceneManagement;
 // I got rid of the movement on the same scene for now, since we're really only moving between scenes at the moment
 public class TransitionPoint : MonoBehaviour
 {
-    [SerializeField] private LevelLoader levelLoader; // make sure each level you want to transition to/from has a level loader 
+    [SerializeField] protected LevelLoader levelLoader; // make sure each level you want to transition to/from has a level loader 
     // if this isn't working make sure to check that you have all scenes loaded in the build settings
+
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,4 +20,6 @@ public class TransitionPoint : MonoBehaviour
             levelLoader.LoadNextLevel();
         }
     }
+    
+   
 }

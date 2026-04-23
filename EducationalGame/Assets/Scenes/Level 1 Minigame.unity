@@ -4030,7 +4030,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 480104116}
-        m_TargetAssemblyTypeName: ShooterMove, Assembly-CSharp
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -4142,12 +4142,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8d09293b903949a99de28dc79e78ac6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShooterMove
+  m_EditorClassIdentifier: Assembly-CSharp::Shooter
   bulletPrefab: {fileID: 3265365585460156760, guid: 551890a3776f445ba8982e6daea309b9, type: 3}
   firePoint: {fileID: 1555020848}
   moveSpeed: 5
   playerHealthBar: {fileID: 983534758}
-  playerHealth: 0
+  playerHealth: 20
   maxHealth: 20
 --- !u!1 &535357181
 GameObject:
@@ -4755,10 +4755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetManager
   processes:
-  - {fileID: -4933000145349911836, guid: c55f50f783a30410da654c5776f5af44, type: 3}
-  - {fileID: -4933000145349911836, guid: c55f50f783a30410da654c5776f5af44, type: 3}
-  - {fileID: 6836671148287191351, guid: d50fb2ac595e74ad7b2444112531a54d, type: 3}
-  - {fileID: -4933000145349911836, guid: c55f50f783a30410da654c5776f5af44, type: 3}
+  - {fileID: -5952509638553233377, guid: c55f50f783a30410da654c5776f5af44, type: 3}
+  - {fileID: -4933000145349911836, guid: 92563f446fb0f4079bc9e7c7b153beed, type: 3}
+  - {fileID: -5952509638553233377, guid: 18bfdc323e4494d5bbbfb34d5a3f6088, type: 3}
+  - {fileID: 6836671148287191351, guid: 7d7a8c4731e02441daeb75c17998ee20, type: 3}
   - {fileID: 6836671148287191351, guid: d50fb2ac595e74ad7b2444112531a54d, type: 3}
   spawnPoints:
   - {fileID: 1191373162}
@@ -4767,6 +4767,7 @@ MonoBehaviour:
   - {fileID: 1781851387}
   - {fileID: 636807887}
   schedulingMode: 
+  player: {fileID: 480104116}
 --- !u!4 &1101761560
 Transform:
   m_ObjectHideFlags: 0

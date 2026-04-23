@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcDialogue
   npcName: Mysterious Guy
   dialogueLines:
-  - Get ready to shoot!
+  - The only way out of here is to understand how process scheduling works!
+  - ...
+  - You'll never get out!
   autoProgressLines: 
   dialogueSpeed: 0.05
   autoProgressDelay: 1.5
