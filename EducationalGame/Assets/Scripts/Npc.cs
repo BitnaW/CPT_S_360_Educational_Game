@@ -1,6 +1,8 @@
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class NPC : MonoBehaviour, IInteractable
@@ -10,10 +12,22 @@ public class NPC : MonoBehaviour, IInteractable
     // UI Elements 
     public GameObject dialoguePanel;
     public TMP_Text  nameText, dialogueText;
-    
+    public Button closeButton; 
+    //opt. addition
+    //public Image portraitImage;
+
     protected int dialogueIndex;
     protected bool isTyping, isDialogueActive;
     
+    //set dialogue panel to empty until interaction  
+    void Start()
+    {
+        dialoguePanel.SetActive(false); // dialogue panel is closed at the start
+        nameText.SetText(""); 
+        dialogueText.SetText("");
+    }
+
+
     public void Interact()
     {
         if (dialogueData == null)
@@ -32,16 +46,19 @@ public class NPC : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return !isDialogueActive;
+        return true; //changed for level 2, so you can access dialogue wherever
     }
 
-    protected void StartDialogue()
+    public void StartDialogue() //changed to public to allow interact to call it
     {
         isDialogueActive = true;
         dialogueIndex = 0; // starts the dialogue index all the way back to the beginning
         nameText.SetText(dialogueData.npcName);
         dialoguePanel.SetActive(true); // opens the dialogue panel
         StartCoroutine(TypeLine()); // starts typing a line
+
+        closeButton.onClick.RemoveAllListeners();
+        closeButton.onClick.AddListener(EndDialogue);
     }
 
     protected virtual void NextLine()
@@ -88,6 +105,7 @@ public class NPC : MonoBehaviour, IInteractable
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.SetText("");
+        
         dialoguePanel.SetActive(false);
     }
     
