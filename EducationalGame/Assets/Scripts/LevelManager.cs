@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Unity.VisualScripting;
 
 public class LevelTimer : MonoBehaviour
@@ -10,9 +11,11 @@ public class LevelTimer : MonoBehaviour
     private bool timerRunning = true;
 
 //script to handle death conditions
-    [Header("Death UI")]
-    public GameObject deathScreen;
-    public float deathScreenDuration = 2f;
+[Header("Death UI")]
+public Image deathScreenImage;  
+public Sprite[] deathFrames;    
+public float deathFrameRate = 0.3f;
+public float deathScreenDuration = 2f;
 
 
 
@@ -47,20 +50,27 @@ public class LevelTimer : MonoBehaviour
     {
         StartCoroutine(ShowDeathThenGameOver());
     }
-
     private System.Collections.IEnumerator ShowDeathThenGameOver()
     {
         Time.timeScale = 0f;
+        deathScreenImage.gameObject.SetActive(true);
+        deathScreenImage.color = new Color(1, 1, 1, 1);
+        StartCoroutine(PlayDeathAnimation());
 
-        if (deathScreen != null)
-        {
-            deathScreen.SetActive(true);
-        }
-
-        yield return new WaitForSeconds(deathScreenDuration); //real time to show death screen
+        yield return new WaitForSecondsRealtime(deathScreenDuration);
 
         Time.timeScale = 1f;
-        SceneManager.LoadScene("GameOverScene"); 
+        //if restart, do logic here:
+        //SceneManager.LoadScene("GameOverScene");
     }
-
+    private System.Collections.IEnumerator PlayDeathAnimation()
+    {
+        int frameIndex = 0;
+        while (true)
+        {
+            deathScreenImage.sprite = deathFrames[frameIndex % deathFrames.Length];
+            frameIndex++;
+            yield return new WaitForSecondsRealtime(deathFrameRate);
+        }
+    }
 }

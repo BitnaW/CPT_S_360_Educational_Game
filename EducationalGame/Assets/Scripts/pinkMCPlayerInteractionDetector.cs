@@ -20,7 +20,7 @@ public class pinkMCPlayerInteractionDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent(out IInteractable Interactable)&& Interactable.CanInteract())
+        if(collision.TryGetComponent(out IInteractable Interactable))
         {
             inRange = Interactable;
             //set icon true if you want to use one 
@@ -31,7 +31,10 @@ public class pinkMCPlayerInteractionDetector : MonoBehaviour
     {
         if (collision.TryGetComponent(out IInteractable Interactable) && Interactable == inRange)
         {
-            inRange = null;
+            if(!inRange.CanInteract()) return; 
+            {
+                inRange = null;
+            }
             //set icon false if you want to use one 
         }
     }

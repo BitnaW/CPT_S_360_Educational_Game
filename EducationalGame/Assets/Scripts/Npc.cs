@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return !isDialogueActive;
+        return true; //changed for level 2, so you can access dialogue wherever
     }
 
     public void StartDialogue() //changed to public to allow interact to call it
