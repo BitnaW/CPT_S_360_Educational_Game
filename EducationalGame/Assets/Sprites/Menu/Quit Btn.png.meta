@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb5db46f2eb7e7745980a81179cdb335
+guid: ca16706812e29c34684f1749f2a79c8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4817660081229634180
-    second: Quit Btn_0
+      213: -8653955365535335118
+    second: Quit Btn 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> origin/MenuWork
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -104,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Quit Btn_0
+      name: Quit Btn 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c756ab16eab342db0800000000000000
-      internalID: -4817660081229634180
+      spriteID: 23d3e271279f6e780800000000000000
+      internalID: -8653955365535335118
       vertices: []
       indices: 
       edges: []
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Quit Btn_0: -4817660081229634180
+      Quit Btn 1_0: -8653955365535335118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
