@@ -112,8 +112,3 @@ EducationalGame/UserSettings/
 # try to ignore Temp anywhere
 **/[Tt]emp/**
 EducationalGame/Temp/__Backupscenes/0.backup
-<<<<<<< HEAD
-
-EducationalGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
-=======
->>>>>>> 73399b3c (Main menu + Options + Level Selector Screen)
