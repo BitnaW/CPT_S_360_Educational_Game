@@ -8,6 +8,8 @@ public class TargetManager : MonoBehaviour
     [SerializeField] private List<Transform> spawnPoints;
     [SerializeField] private string schedulingMode;
     [SerializeField] private Shooter player; 
+    [SerializeField] private LevelLoader levelLoader;
+    
     
     private List<ProcessTarget> validTargets = new();
     private Scheduler scheduler;
@@ -38,6 +40,7 @@ public class TargetManager : MonoBehaviour
         ProcessTarget spawned = Instantiate(process, spawnPoint.position, spawnPoint.rotation);
         spawned.targetManager = this;
         validTargets.Add(spawned);
+        BattleUI.Instance.RegisterEnemy(spawned);
     }
 
     // targets hold their own damage checking don't worry about that here 
@@ -57,5 +60,15 @@ public class TargetManager : MonoBehaviour
     public void OnTargetDestroyed(ProcessTarget target)
     {
         validTargets.Remove(target);
+        BattleUI.Instance.RemoveEnemy(target);
+        if (GetValidTargets().Count ==  0)
+        {
+            levelLoader.LoadNextLevel();
+        }
+    }
+
+    public List<ProcessTarget> GetValidTargets()
+    {
+        return validTargets;
     }
 }
