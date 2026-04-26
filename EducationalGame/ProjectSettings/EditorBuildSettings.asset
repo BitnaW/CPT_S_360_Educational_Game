@@ -21,11 +21,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: cae6f4b4572971f46a7109c7d0f93d45
   - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: 51357c20ea145411c819ab84b805e55b
+    path: Assets/Scenes/Level 4.unity
+    guid: 4009993cecb88f24cb8a93ada3c3da03
   - enabled: 1
-    path: Assets/Scenes/Level 3 Minigame.unity
-    guid: ec9be9be5b2e745b7b1eb28929fef41f
+    path: Assets/Scenes/menuScene.unity
+    guid: c2dc0558158054706ac973202112fdd8
+  - enabled: 1
+    path: Assets/Scenes/Fail.unity
+    guid: b860e34722e399646a55417cd339f07a
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 4f70af60edb52af478049d71dd1a0104
+  - enabled: 1
+    path: Assets/Scenes/Final Level.unity
+    guid: 7e1e1dabbc623ad488938fa9456525fc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
