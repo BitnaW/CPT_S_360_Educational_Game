@@ -3254,10 +3254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477eaa9805bdff440b52e678c4ccb21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuAudioSettings
-  audioMixer: {fileID: 24100000, guid: 8f4dcd17cb9c1d34bab0aabf677e179a, type: 2}
+  audioMixer: {fileID: 24100000, guid: c0d0bbcc94b8dd548b1d11ac4a31c8ee, type: 2}
   masterVolumeSlider: {fileID: 1470747534}
   defaultVolume: 0.75
-  volumeMixer: {fileID: 0}
+  volumeMixer: {fileID: 24100000, guid: c0d0bbcc94b8dd548b1d11ac4a31c8ee, type: 2}
 --- !u!114 &2140898241
 MonoBehaviour:
   m_ObjectHideFlags: 0

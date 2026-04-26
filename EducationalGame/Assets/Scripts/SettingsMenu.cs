@@ -15,6 +15,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private bool allowEscapeToggle = true;
 
     private bool isOpen;
+    public bool IsOpen => isOpen;
 
     private void Start()
     {

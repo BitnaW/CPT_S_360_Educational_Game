@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5715d23bdb69bf546936ef9ab715cacf
+guid: cdea680b07069ba46b48894ca8909cc7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3425746026797460134
-    second: IMG_1512_0
+      213: -4812507337446286131
+    second: Compota_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_1512_0
+      name: Compota_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 82
         y: 16
-        width: 98
-        height: 103
+        width: 1670
+        height: 1049
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aae7f96cd1ba8f20800000000000000
-      internalID: 3425746026797460134
+      spriteID: dcc9d88031a863db0800000000000000
+      internalID: -4812507337446286131
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_1512_0: 3425746026797460134
+      Compota_0: -4812507337446286131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
