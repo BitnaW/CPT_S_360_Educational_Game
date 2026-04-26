@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     // called by the play button, opens the stage select panel
     public void onPlayButton()
     {
-        menuStateCoordinator.ShowStageSelect();
+        menuStateCoordinator.HandlePlayButton();
     }
 
     // called by options button, opens the options panel

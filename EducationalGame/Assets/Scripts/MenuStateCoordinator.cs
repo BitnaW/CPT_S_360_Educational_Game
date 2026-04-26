@@ -7,6 +7,7 @@ public class MenuStateCoordinator : MonoBehaviour
     [SerializeField] private GameObject startScreenPanel;
     [SerializeField] private GameObject stageSelectPanel;
     [SerializeField] private GameObject optionsPanel;
+    [SerializeField] private string introSceneName = "Introductory";
 
     // used to switch between menu screens
     private enum MenuScreen
@@ -24,6 +25,21 @@ public class MenuStateCoordinator : MonoBehaviour
     {
         // force menu to start screen on scene load
         SwitchTo(MenuScreen.Start, false);
+
+        if (IntroFlow.ConsumeOpenStageSelectOnMenuLoad())
+        {
+            ShowStageSelect();
+        }
+    }
+
+    public void HandlePlayButton()
+    {
+        if (IntroFlow.TryStartIntro(introSceneName))
+        {
+            return;
+        }
+
+        ShowStageSelect();
     }
 
     public void ShowStart()
