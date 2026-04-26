@@ -9,8 +9,8 @@ public class Shooter : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     [SerializeField] HealthBar playerHealthBar;
-    [SerializeField] private int playerHealth;
-    [SerializeField] private int maxHealth = 20;
+    public int playerHealth;
+    public int maxHealth = 20;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +39,8 @@ public class Shooter : MonoBehaviour
     {
         playerHealth = Mathf.Max(0, playerHealth - amount);
         playerHealthBar.UpdateHealthBar(playerHealth, maxHealth);
+        BattleUI.Instance.UpdatePlayerHealth(playerHealth, maxHealth);
+        BattleUI.Instance.Log($"Player took {amount} damage! Health: {playerHealth}/{maxHealth}");
 
         if (playerHealth <= 0)
         {

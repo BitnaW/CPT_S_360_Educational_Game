@@ -27,11 +27,18 @@ public class ProcessTarget : MonoBehaviour
     public void TargetTakeDamage()
     {
         remainingTime--;
+        BattleUI.Instance.UpdateEnemyHealth(this);
+        BattleUI.Instance.Log($"{gameObject.name} took 1 damage! Health: {remainingTime}/{burstTime}");
         healthBar.UpdateHealthBar(remainingTime, burstTime);
         if (remainingTime <= 0)
         {
             targetManager.OnTargetDestroyed(this);
             Destroy(gameObject);
         }
+    }
+
+    public void AttackPlayer(Shooter player)
+    {
+        player.TakeDamage(1);
     }
 }

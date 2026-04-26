@@ -105,8 +105,11 @@ public class NPC : MonoBehaviour, IInteractable
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueText.SetText("");
-        
-        dialoguePanel.SetActive(false);
+        if (dialoguePanel)
+        {
+            dialoguePanel.SetActive(false);
+        }
+            
     }
     
     

@@ -689,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 207386237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.41, y: 3.82, z: 0}
+  m_LocalPosition: {x: 39.79, y: -3.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4110,7 +4110,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1742468881}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
         m_MethodName: EndDialogue
         m_Mode: 1
@@ -10900,7 +10900,7 @@ Transform:
   m_GameObject: {fileID: 1028777299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.41, y: 3.82, z: -2}
+  m_LocalPosition: {x: 39.79, y: -3.22, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11006,7 +11006,7 @@ Transform:
   m_GameObject: {fileID: 1052183802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.41, y: 3.82, z: -2}
+  m_LocalPosition: {x: 39.79, y: -3.22, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44657,9 +44657,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 4812629608559478022, guid: c49ac6ec4eb504866be77f6216a76793, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4929956985272535932, guid: c49ac6ec4eb504866be77f6216a76793, type: 3}
       propertyPath: exitScene
-      value: Level 1
+      value: IntroCutscene
       objectReference: {fileID: 0}
     - target: {fileID: 4929956985272535932, guid: c49ac6ec4eb504866be77f6216a76793, type: 3}
       propertyPath: transition
@@ -44830,7 +44834,6 @@ SceneRoots:
   - {fileID: 36388986}
   - {fileID: 207386244}
   - {fileID: 1236226351}
-  - {fileID: 1742468884}
   - {fileID: 2118427652}
   - {fileID: 2107339240715981423}
   - {fileID: 1100398606}
