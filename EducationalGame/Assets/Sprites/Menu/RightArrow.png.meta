@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e1c1d05f6d65aa4caa1dbaa585d1968
+guid: e306fe413a61541469ef1457611f542a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7635563162873571100
-    second: RightArrow_0
+      213: -6449970478506264741
+    second: RightArrow 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,11 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: 1
->>>>>>> origin/MenuWork
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -104,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RightArrow_0
+      name: RightArrow 1_0
       rect:
         serializedVersion: 2
         x: 9
@@ -119,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c17232fdd38f6f960800000000000000
-      internalID: 7635563162873571100
+      spriteID: b57b0e0f50a1d76a0800000000000000
+      internalID: -6449970478506264741
       vertices: []
       indices: 
       edges: []
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RightArrow_0: 7635563162873571100
+      RightArrow 1_0: -6449970478506264741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
